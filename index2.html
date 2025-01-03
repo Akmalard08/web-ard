@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Simpan Pinjam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        header .logo {
+            width: 50px;
+            margin-right: 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #444;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        section h1, section h2 {
+            color: #FFD700;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #222;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #444;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        table, th, td {
+            border: 1px solid #444;
+            text-align: left;
+            padding: 8px;
+        }
+
+        table th {
+            background-color: #333;
+        }
+
+        table tbody tr:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header dan Navigasi -->
+    <header>
+        <img src="images.png" alt="Logo Aplikasi" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#transaksi">Transaksi</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Halaman Beranda -->
+    <section id="beranda">
+        <h1>Selamat Datang di Aplikasi Simpan Pinjam</h1>
+        <p>Aplikasi Simpan Pinjam adalah solusi digital modern untuk mengelola keuangan Anda. Kami hadir untuk mempermudah proses menyimpan dana dan mengelola pinjaman dengan cepat, transparan, dan aman.</p>
+        <ul>
+            <li>Kelola dana simpanan dengan mudah.</li>
+            <li>Lacak transaksi secara real-time.</li>
+            <li>Pengelolaan pinjaman dengan bunga kompetitif.</li>
+            <li>Dukungan pengguna yang responsif.</li>
+        </ul>
+        <p>Bergabunglah bersama komunitas kami dan nikmati kemudahan dalam mengelola keuangan Anda.</p>
+    </section>
+
+    <!-- Halaman Transaksi -->
+    <section id="transaksi">
+        <h2>Transaksi</h2>
+        <form id="transaksiForm">
+            <label for="nama">Nama Transaksi:</label>
+            <input type="text" id="nama" name="nama" required>
+            
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" required>
+            
+            <label for="kategori">Kategori:</label>
+            <select id="kategori" name="kategori" required>
+                <option value="Simpan">Simpan</option>
+                <option value="Pinjam">Pinjam</option>
+            </select>
+            
+            <button type="submit">Simpan</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Simpanan Awal</td>
+                    <td>500000</td>
+                    <td>Simpan</td>
+                </tr>
+                <tr>
+                    <td>Pinjaman Modal</td>
+                    <td>200000</td>
+                    <td>Pinjam</td>
+                </tr>
+                <tr>
+                    <td>Simpanan Bulanan</td>
+                    <td>300000</td>
+                    <td>Simpan</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Halaman Profil -->
+    <section id="profil">
+        <h2>Profil Aplikasi</h2>
+        <p>Aplikasi Simpan Pinjam dikembangkan untuk membantu masyarakat dalam mengelola keuangan pribadi maupun organisasi. Berikut adalah fitur utama kami:</p>
+        <ol>
+            <li><strong>Sistem Penyimpanan:</strong> Rekam simpanan Anda dengan aman dan rapi.</li>
+            <li><strong>Pengelolaan Pinjaman:</strong> Ajukan dan lacak pinjaman dengan mudah.</li>
+            <li><strong>Antarmuka Sederhana:</strong> Desain yang ramah pengguna untuk semua kalangan.</li>
+            <li><strong>Laporan Keuangan:</strong> Dapatkan laporan transaksi secara berkala.</li>
+        </ol>
+        <p>Dengan aplikasi ini, kami bertujuan untuk memberikan pengalaman terbaik dalam pengelolaan keuangan Anda. Aplikasi ini cocok untuk individu, koperasi, dan organisasi yang membutuhkan solusi keuangan digital.</p>
+    </section>
+
+    <!-- Halaman Login -->
+    <section id="login">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("transaksiForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nama = document.getElementById("nama").value;
+            const jumlah = document.getElementById("jumlah").value;
+            const kategori = document.getElementById("kategori").value;
+
+            if (!nama || !jumlah || !kategori) {
+                alert("Harap isi semua kolom!");
+                return;
+            }
+
+            const table = document.querySelector("table tbody");
+            const row = table.insertRow();
+            row.insertCell(0).innerText = nama;
+            row.insertCell(1).innerText = jumlah;
+            row.insertCell(2).innerText = kategori;
+
+            alert("Transaksi berhasil disimpan!");
+            document.getElementById("transaksiForm").reset();
+        });
+    </script>
+</body>
+</html>
